@@ -1,3 +1,6 @@
-[submodule "/Users/kuriya0909/dotfiles/vimfiles/vundle.git"]
-	path = /Users/kuriya0909/dotfiles/vimfiles/vundle.git
-	url = http://github.com/gmarik/vundle.git
+[submodule "/Users/kuriya0909/dotfiles/vimfiles/bundle/neobundle.vim"]
+	path = /Users/kuriya0909/dotfiles/vimfiles/bundle/neobundle.vim
+	url = https://github.com/Shougo/neobundle.vim
+[submodule "/Users/kuriya0909/dotfiles/vimfiles/bundle/vimproc"]
+	path = /Users/kuriya0909/dotfiles/vimfiles/bundle/vimproc
+	url = https://github.com/Shougo/vimproc
