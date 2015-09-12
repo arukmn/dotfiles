@@ -1,4 +1,5 @@
 if has('vim_starting')
+
   set nocompatible               " Be iMproved
 
   " Required:
@@ -28,22 +29,31 @@ nmap <Space> [unite]
 
 "スペースキーとaキーでカレントディレクトリを表示
 nnoremap <silent> [unite]a :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+
 "スペースキーとfキーでバッファと最近開いたファイル一覧を表示
 nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer file_mru<CR>
+
 "スペースキーとdキーで最近開いたディレクトリを表示
 nnoremap <silent> [unite]d :<C-u>Unite<Space>directory_mru<CR>
+
 "スペースキーとbキーでバッファを表示
 nnoremap <silent> [unite]b :<C-u>Unite<Space>buffer<CR>
+
 "スペースキーとrキーでレジストリを表示
 nnoremap <silent> [unite]r :<C-u>Unite<Space>register<CR>
+
 "スペースキーとtキーでタブを表示
 nnoremap <silent> [unite]t :<C-u>Unite<Space>tab<CR>
+
 "スペースキーとhキーでヒストリ/ヤンクを表示
 nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
+
 "スペースキーとoキーでoutline
 nnoremap <silent> [unite]o :<C-u>Unite<Space>outline<CR>
+
 "スペースキーとENTERキーでfile_rec:!
 nnoremap <silent> [unite]<CR> :<C-u>Unite<Space>file_rec:!<CR>
+
 "unite.vimを開いている間のキーマッピング
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
@@ -78,7 +88,12 @@ NeoBundle 'Shougo/neomru.vim'
 
 
 """ emmet
-NeoBundle 'mattn/emmet-vim'
+NeoBundleLazy 'mattn/emmet-vim', {
+ \ 'autoload' : {
+ \   'filetypes' : ['html', 'html5', 'eruby', 'jsp', 'xml', 'css', 'scss', 'coffee'],
+ \   'commands' : []
+ \ }}
+
 let g:user_emmet_leader_key='<C-e>'
 let g:user_emmet_settings = {
     \    'variables': {
@@ -110,6 +125,17 @@ NeoBundle 'taichouchou2/html5.vim'
 """ jsのシンタックス追加
 NeoBundle 'taichouchou2/vim-javascript'
 
+""" coffee-script シンタックス追加
+NeoBundle 'kchmck/vim-coffee-script'
+
+""" coffee-react シンタックス追加
+NeoBundle 'mtscout6/vim-cjsx'
+
+""" node
+NeoBundle 'moll/vim-node'
+
+""" js シンタックス
+NeoBundle 'pangloss/vim-javascript'
 
 """ インデントに色をつける
 NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -141,13 +167,12 @@ let g:syntastic_check_on_save = 1 "ファイル保存時にはチェックを実
 
 call neobundle#end()
 
-" Required:
-filetype plugin indent on
-
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
+" Required:
+filetype plugin indent on
 
 
 """ {{{ 基本設定
@@ -203,4 +228,8 @@ noremap <CR> o<ESC>
 
 " tree
 noremap ,N :NERDTreeToggle
+
+" insertモードから通常モードへ
+imap <c-j> <ESC>
+
 """ }}}
