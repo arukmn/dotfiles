@@ -104,7 +104,7 @@ let g:user_emmet_settings = {
 
 
 """ vimのテキストオブジェクトを拡張
-NeoBundle 'taichouchou2/surround.vim'
+"NeoBundle 'taichouchou2/surround.vim'
 
 
 """ urlを開いたりググったり出来る
@@ -130,6 +130,9 @@ NeoBundle 'kchmck/vim-coffee-script'
 
 """ coffee-react シンタックス追加
 NeoBundle 'mtscout6/vim-cjsx'
+
+""" elixirのシンタックス追加
+NeoBundle 'elixir-lang/vim-elixir'
 
 """ node
 NeoBundle 'moll/vim-node'
@@ -221,7 +224,7 @@ filetype on
 
 """ マッピング {{{
 "ノーマルモード時にエンターキーで改行挿入
-noremap <CR> o<ESC>
+"noremap <CR> o<ESC>
 
 " ノーマルモード時にスペースキーで半角スペース挿入
 " noremap <space> i<space><ESC>l
