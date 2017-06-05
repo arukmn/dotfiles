@@ -40,7 +40,7 @@ done
 #ln -sf ${HOME}/dotfiles/_vimrc ~/.vimrc
 ln -sf ${HOME}/dotfiles/_zshrc ~/.zshrc
 
-sh ${HOME}/dotfiles/mac.sh
+exec $SHELL
 
 # git
 # atom,alfred,spectacle,f.lux,karabiner
