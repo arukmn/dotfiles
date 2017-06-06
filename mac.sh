@@ -52,6 +52,7 @@ casks=(
     atom
     sequel-pro
     spectacle
+    Flux
 )
 
 echo "start brew cask install apps..."
