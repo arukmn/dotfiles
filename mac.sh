@@ -50,7 +50,8 @@ casks=(
     alfred
     iterm2
     atom
-    sequal-pro
+    sequel-pro
+    spectacle
 )
 
 echo "start brew cask install apps..."
