@@ -49,3 +49,11 @@ function peco-find-file() {
 }
 zle -N peco-find-file
 bindkey '^q' peco-find-file
+
+alias g='git'
+alias ga='git add'
+alias gd='git diff'
+alias gco='git checkout'
+alias gs='git status'
+alias gc='git config'
+alias gcm='git commit -m'
