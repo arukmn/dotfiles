@@ -30,6 +30,8 @@ formulas=(
     mysql
     ghq
     hub
+    redis
+    mongo
 )
 
 "Brew tap..."
@@ -47,7 +49,6 @@ casks=(
     google-chrome
     google-japanese-ime
     slack
-    alfred
     iterm2
     atom
     sequel-pro
@@ -64,3 +65,6 @@ brew cleanup
 brew cask cleanup
 
 echo $(tput setaf 2)Complete Homebrew installing. ✔︎$(tput sgr0)
+
+defaults write -g InitialKeyRepeat -int 10
+defaults write -g KeyRepeat -int 1
